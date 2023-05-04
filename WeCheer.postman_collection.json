@@ -1,0 +1,451 @@
+{
+	"info": {
+		"_postman_id": "8ad010d4-605f-4bd6-bddb-df2c82adbd7c",
+		"name": "WeCheer",
+		"description": "API for dashboard core domain.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10559496"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "statistics",
+					"item": [
+						{
+							"name": "Get statistics",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/statistics/topusers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"statistics",
+										"topusers"
+									],
+									"query": [
+										{
+											"key": "CountryCode",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "LocationId",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "StartDate",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "EndDate",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "TimeOffsetInSecconds",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/statistics/topusers?CountryCode=<string>&LocationId=<string>&StartDate=<dateTime>&EndDate=<dateTime>&TimeOffsetInSecconds=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"statistics",
+												"topusers"
+											],
+											"query": [
+												{
+													"key": "CountryCode",
+													"value": "<string>"
+												},
+												{
+													"key": "LocationId",
+													"value": "<string>"
+												},
+												{
+													"key": "StartDate",
+													"value": "<dateTime>"
+												},
+												{
+													"key": "EndDate",
+													"value": "<dateTime>"
+												},
+												{
+													"key": "TimeOffsetInSecconds",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"totalBottlesPeriod\": \"<long>\",\n  \"topUsers\": [\n    {\n      \"userId\": \"<string>\",\n      \"userName\": \"<string>\",\n      \"totalBottles\": \"<long>\",\n      \"todaysBottles\": \"<long>\",\n      \"activeDays\": \"<long>\"\n    },\n    {\n      \"userId\": \"<string>\",\n      \"userName\": \"<string>\",\n      \"totalBottles\": \"<long>\",\n      \"todaysBottles\": \"<long>\",\n      \"activeDays\": \"<long>\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get statistics",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/statistics/globalstats",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"statistics",
+										"globalstats"
+									],
+									"query": [
+										{
+											"key": "CountryCode",
+											"value": "<string>",
+											"disabled": true
+										},
+										{
+											"key": "LocationId",
+											"value": "<string>",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/statistics/globalstats?CountryCode=<string>&LocationId=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"statistics",
+												"globalstats"
+											],
+											"query": [
+												{
+													"key": "CountryCode",
+													"value": "<string>"
+												},
+												{
+													"key": "LocationId",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"totalCaps\": \"<long>\",\n  \"lastBottleCap\": {\n    \"captureId\": \"<string>\",\n    \"brand\": \"<string>\",\n    \"userId\": \"<string>\",\n    \"userName\": \"<string>\",\n    \"avatar\": \"<string>\",\n    \"countryCode\": \"<string>\",\n    \"location\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"address\": \"<string>\",\n      \"gpsLatitude\": \"<double>\",\n      \"gpsLongitude\": \"<double>\",\n      \"district\": \"<string>\",\n      \"city\": \"<string>\",\n      \"country\": \"<string>\",\n      \"countryCode\": \"<string>\",\n      \"branchName\": \"<string>\",\n      \"branchId\": \"<string>\",\n      \"regionId\": \"<string>\",\n      \"regionName\": \"<string>\",\n      \"areaId\": \"<string>\",\n      \"areaName\": \"<string>\",\n      \"referenceId\": \"<string>\",\n      \"tags\": {\n        \"tempor4b9\": \"<string>\",\n        \"voluptate73\": \"<string>\",\n        \"quisb\": \"<string>\"\n      },\n      \"dstTimeOffset\": \"<integer>\",\n      \"timeOffset\": \"<integer>\",\n      \"timeZoneId\": \"<string>\",\n      \"timeZoneName\": \"<string>\",\n      \"localTime\": \"<dateTime>\"\n    },\n    \"timeOpened\": \"<dateTime>\",\n    \"timeReceived\": \"<dateTime>\",\n    \"fullLocation\": \"<string>\",\n    \"imageUrl\": \"<string>\",\n    \"show\": \"<boolean>\"\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "hei-statistics",
+					"item": [
+						{
+							"name": "Get statistics",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/hei-statistics/topusers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"hei-statistics",
+										"topusers"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/hei-statistics/topusers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"hei-statistics",
+												"topusers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"topUsers\": [\n    {\n      \"userId\": \"<string>\",\n      \"userName\": \"<string>\",\n      \"avatar\": \"<string>\",\n      \"totalCheckins\": \"<integer>\",\n      \"totalBottles\": \"<long>\"\n    },\n    {\n      \"userId\": \"<string>\",\n      \"userName\": \"<string>\",\n      \"avatar\": \"<string>\",\n      \"totalCheckins\": \"<integer>\",\n      \"totalBottles\": \"<long>\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get statistics",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/hei-statistics/globalstats",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"hei-statistics",
+										"globalstats"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/hei-statistics/globalstats",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"hei-statistics",
+												"globalstats"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"totalCaps\": \"<long>\",\n  \"lastBottleCap\": {\n    \"captureId\": \"<string>\",\n    \"brand\": \"<string>\",\n    \"userId\": \"<string>\",\n    \"userName\": \"<string>\",\n    \"avatar\": \"<string>\",\n    \"countryCode\": \"<string>\",\n    \"location\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"address\": \"<string>\",\n      \"gpsLatitude\": \"<double>\",\n      \"gpsLongitude\": \"<double>\",\n      \"district\": \"<string>\",\n      \"city\": \"<string>\",\n      \"country\": \"<string>\",\n      \"countryCode\": \"<string>\",\n      \"branchName\": \"<string>\",\n      \"branchId\": \"<string>\",\n      \"regionId\": \"<string>\",\n      \"regionName\": \"<string>\",\n      \"areaId\": \"<string>\",\n      \"areaName\": \"<string>\",\n      \"referenceId\": \"<string>\",\n      \"tags\": {\n        \"occaecatac\": \"<string>\"\n      },\n      \"dstTimeOffset\": \"<integer>\",\n      \"timeOffset\": \"<integer>\",\n      \"timeZoneId\": \"<string>\",\n      \"timeZoneName\": \"<string>\",\n      \"localTime\": \"<dateTime>\"\n    },\n    \"timeOpened\": \"<dateTime>\",\n    \"timeReceived\": \"<dateTime>\",\n    \"fullLocation\": \"<string>\",\n    \"imageUrl\": \"<string>\",\n    \"show\": \"<boolean>\"\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "version",
+					"item": [
+						{
+							"name": "Get version info",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/version",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"version"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/version",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"version"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"<string>\""
+								}
+							]
+						},
+						{
+							"name": "My Test",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/version/myversion",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"version",
+										"myversion"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/version/myversion",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"version",
+												"myversion"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"<string>\""
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://api.wecheer.me/dashboard",
+			"type": "string"
+		}
+	]
+}
